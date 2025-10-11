@@ -1,5 +1,5 @@
 package Live;
-abstract class Human {
+class Human {
     private int bankBalance = 2000;
     protected int age;
     void speak() {
@@ -23,6 +23,7 @@ public class Student extends Human {
 
     public static void main(String[] args) {
         Student goms = new Student("Goms", 20);
+        goms.name = "code io";
 //        goms.display();
     }
 }

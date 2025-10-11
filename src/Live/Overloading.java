@@ -2,25 +2,25 @@ package Live;
 
 public class Overloading {
     int age;
-    int arr[];
+    //int arr[];
     Overloading(){
         age = 20;
     }
 
     Overloading(int age){
         this.age = age;
-        arr = new int[5];
-        arr[0] = 89;
+//        arr = new int[5];
+//        arr[0] = 89;
     }
 
     // copy constructor
     Overloading(Overloading o){
         this.age = o.age;
-        //this.arr = o.arr;
-        arr = new int[o.arr.length];
-        for(int i=0;i<arr.length;i++){
-            arr[i] = o.arr[i];
-        }
+        // this.arr = o.arr; // shallow copy
+//        this.arr = new int[o.arr.length];
+//        for(int i=0;i<arr.length;i++){
+//            this.arr[i] = o.arr[i]; // deep copy
+//        }
     }
 
     static int add(int n1, int n2){
@@ -43,11 +43,13 @@ public class Overloading {
 //        System.out.println(o.age);
 //        Overloading o1 = new Overloading(25);
 //        System.out.println(o1.age);
-        Overloading o2 = new Overloading(23);
-        Overloading o2Copy = new Overloading(o2); // 23
-        o2.age = 78;
-        o2.arr[0] = 98;
-        System.out.println(o2Copy.age);
-        System.out.println(o2Copy.arr[0]);
+//        Overloading o2 = new Overloading(23);
+//        Overloading o2Copy = new Overloading(o2); // 23
+//        o2.age = 78;
+//        o2.arr[0] = 98;
+//        System.out.println(o2Copy.age);
+//        System.out.println(o2Copy.arr[0]);
+        Overloading o = new Overloading(2);
+        Overloading o1 = o;
     }
 }
