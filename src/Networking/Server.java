@@ -1,4 +1,4 @@
-package Demo;
+package Networking;
 
 import java.io.IOException;
 import java.io.PrintWriter;
